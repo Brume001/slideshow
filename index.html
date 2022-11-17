@@ -4,55 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIDE SHOW</title>
+    <title>Slide</title>
     <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="myslides fade">
-            <div class="numbertext">1 / 6</div>
-            <img src="pexels-francesco-ungaro-97558.jpg"style="width: 100%" >
-            <div class="text">Caption text</div>
-        </div>
-        <div class="myslides fade">
-            <div class="numbertext">2 / 6</div>
-            <img src="pexels-james-wheeler-414612.jpg"style="width: 100%" >
-            <div class="text">Caption text</div>
-        </div>
-        <div class="myslides fade">
-            <div class="numbertext">3 / 6</div>
-            <img src="pexels-jonathan-petersson-1237119.jpg" style="width: 100%">
-            <div class="text">Caption text</div>
-        </div>
-        <div class="myslides fade">
-            <div class="numbertext">4 / 6</div>
-            <img src="pexels-marek-piwnicki-10050631.jpg" style="width: 100%">
-            <div class="text">Caption text</div>
-        </div>
-        <div class="myslides fade">
-            <div class="numbertext">5 / 6</div>
-            <img src="pexels-pixabay-207247.jpg"style="width: 100%" >
-            <div class="text">Caption text</div>
-        </div>
-        <div class="myslides fade">
-            <div class="numbertext">6 / 6</div>
-            <img src="pexels-vedad-colic-577289.jpg" style="width: 100%">
-            <div class="text">Caption text</div>
-        </div>
+    <section aria-label="photo">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            <ul data-slides>
+            <li class="slide" data-active>
+                <img src="pexels-francesco-ungaro-97558.jpg" alt="1">
+            </li>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="prev" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlides(1)"></span>
-        <span class="dot" onclick="currentSlides(2)"></span>
-        <span class="dot" onclick="currentSlides(3)"></span>
-        <span class="dot" onclick="currentSlides(4)"></span>
-        <span class="dot" onclick="currentSlides(5)"></span>
-        <span class="dot" onclick="currentSlides(6)"></span>
-    </div>
+            <li class="slide">
+                <img src="pexels-james-wheeler-414612.jpg" alt="2">
+            </li>
 
-    <script src="script.js"></script>
+            <li class="slide">
+                <img src="pexels-jonathan-petersson-1237119.jpg" alt="3">
+            </li>
+
+            <li class="slide">
+                <img src="pexels-marek-piwnicki-10050631.jpg" alt="4">
+            </li>
+
+            <li class="slide">
+                <img src="pexels-tom-fisk-1716158.jpg" alt="5">
+            </li>
+
+            <li class="slide">
+                <img src="pexels-vedad-colic-577289.jpg" alt="6">
+            </li>
+
+            </ul>
+        </div>
+    </section>
+    <script src="slide.js"></script>
 </body>
 </html>
