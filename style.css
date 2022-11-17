@@ -1,39 +1,73 @@
-*{
+*,*::before, *::before{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
-.myslides{
-    display: none;
-}
-img{
-    vertical-align: middle;
-}
-.slideshows-container{
-    max-width: 80%;
+.carousel {
+    width: 50%;
+    height: 50%;
     position: relative;
-    margin: auto;
+
 }
-.prev, .next{
-    cursor: pointer;
+
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.slide{
     position: absolute;
-    top: 50%;
-    padding: 16px;
-    margin-top: -22px;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+
+}
+.slide > img{
+    display: block;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+
+    
+    
+
+}
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top:50%;
+    transform: translateY(200%);
+    color: rgb(187, 126, 36);
+    ;
+    border-radius: 5px;
+    padding: 0.5px;
+    background-color:rgba(0,0,0 .1);
+}
+.carousel-button:hover,
+.carousel-button:focus {
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    background-color: rgba(0,0,0 .2);
 }
-.next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.carousel-button:focus {
+    outline: 1px solid black;
 }
-.prev:hover, .next:hover{
-    background-color: black;
+.carousel-button.prev{
+    left:1rem;
+}
+.carousel-button.next{
+    right:1rem;
 }
